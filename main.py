@@ -19,11 +19,17 @@ def on_exit():
     saves.save_challenges_list()
     saves.save_challenges_status()
 
+def tasks():
+    gui.tasks()
+def challenges():
+    gui.challenges()
+def bonuses():
+    gui.bonuses()
 def menu():
     choices = {
-        "1": gui.tasks,
-        "2": gui.challenges,
-        "3": gui.bonuses,
+        "1": tasks,
+        "2": challenges,
+        "3": bonuses,
         "0": gui.menu,
         "9": gui.more
     }
