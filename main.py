@@ -1,4 +1,4 @@
-import loadings, saves, gui
+import loadings, saves, gui, task
 
 def on_start():
     loadings.load_userdata()
@@ -20,7 +20,17 @@ def on_exit():
     saves.save_challenges_status()
 
 def tasks():
+    choices = {
+        "1": task.task_completing,
+        "2": task.task_reroll,
+        "0": menu
+    }
     gui.tasks()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+
 def challenges():
     gui.challenges()
 def bonuses():
