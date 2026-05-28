@@ -11,6 +11,13 @@ def on_start():
         loadings.load_challenges_data()
         loadings.load_challenges_list()
         loadings.load_all_challenges()
+def on_exit():
+        saves.save_userdata()
+        saves.save_task_statuses()
+        saves.save_tasklist()
+        saves.save_challenges_data()
+        saves.save_challenges_list()
+        saves.save_challenges_status()
 
 def main():
         on_start()
