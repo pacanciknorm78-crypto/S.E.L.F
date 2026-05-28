@@ -1,0 +1,12 @@
+{
+  "amountQuests_C_tier": 10,
+  "amountQuests_B_tier": 5,
+  "amountQuests_A_tier": 4,
+  "amountQuests_S_tier": 4,
+  "amountQuests_SS_tier": 3,
+  "amountPointFor_C_tier": 10,
+  "amountPointFor_B_tier": 20,
+  "amountPointFor_A_tier": 50,
+  "amountPointFor_S_tier": 100,
+  "amountPointFor_SS_tier": 150
+}

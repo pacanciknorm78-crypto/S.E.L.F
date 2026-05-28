@@ -1,0 +1,10 @@
+userdata = {}
+task_word_list = {}
+sysdata = {}
+taskdata = {}
+tasklist = {}
+task_statuses = {}
+challenges_statuses = {}
+challenges_data = {}
+challenges_list = {}
+all_challenges = {}

@@ -1,0 +1,30 @@
+{
+  "sysData": {
+    "amountOfChallengesPerWeek": 10,
+    "amountOfChallengesPerDay": 2,
+    "amountOfChallengesPerDifficulty": 2,
+    "amountOfChallengesPointsForBonus": 100,
+    "weekTimer": 0,
+    "amountPointForEasy": 250,
+    "amountPointForNormal": 300,
+    "amountPointForHard": 350,
+    "amountPointForInsane": 400,
+    "amountPointForDemonic": 450,
+    "amountChallengePointForEasy": 20,
+    "amountChallengePointForNormal": 25,
+    "amountChallengePointForHard": 30,
+    "amountChallengePointForInsane": 40,
+    "amountChallengePointForDemonic": 45
+  },
+  "userData": {
+    "amountOfCompletedChallengesToday": 0,
+    "amountOfCompletedChallengesWeekly": 0,
+    "amountOfCompletedChallenges": 0,
+    "amountOfCompletedChallenges_easier": 0,
+    "amountOfCompletedChallenges_normal": 0,
+    "amountOfCompletedChallenges_hard": 0,
+    "amountOfCompletedChallenges_insane": 0,
+    "amountOfCompletedChallenges_demonic": 0,
+    "amountChallengePoints": 0
+  }
+}
