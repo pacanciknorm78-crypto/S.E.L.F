@@ -86,7 +86,6 @@ def tasksreroll():
     print(f"║{"":^{Sizes.header}}║")
     print(f"║{" Все задания сброшены, прогресс утерян":^{Sizes.header}}║")
     print(end)
-    input("... --> ")
 
 
 def challenges():

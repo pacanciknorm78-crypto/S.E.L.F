@@ -1,4 +1,4 @@
-import loadings, saves, gui, task
+import loadings, saves, gui, task, data
 
 def on_start():
     loadings.load_userdata()
@@ -52,8 +52,11 @@ def menu():
 
 def main():
     on_start()
-    while True:
-        menu()
+    if data.tasklist["c"][0] == "1":
+        task.task_generator()
+    else:
+        while True:
+            menu()
 
 
 if __name__ == '__main__':

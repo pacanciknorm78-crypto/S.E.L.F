@@ -1,4 +1,4 @@
-import gui, data, random
+import gui, data, random, defaults, saves
 
 def task_completing():
     gui.task_diff_choice()
@@ -8,10 +8,12 @@ def task_completing():
         gui.task_num_choice()
         num = int(input("... --> "))
         data.task_statuses[f"{diff}"][f"is{num}TaskComplete"] = True
+        saves.save_task_statuses()
 
 def task_reroll():
     gui.tasksreroll()
     task_generator()
+    input("Нажмите чтобы продолжить...")
 
 def task_generator():
     wordlist = data.task_word_list
@@ -23,3 +25,6 @@ def task_generator():
             task_category = random.choices(categorys, weights[diff], k=1)[0]
             task = f"{diff} {random.choice(wordlist["action_category"][f"{task_category}"])} {random.choice(wordlist["objects_by_category"][f"{task_category}"])}"
             data.tasklist[f"{diff.lower()}"][i] = task
+            data.task_statuses[f"{diff.lower()}"][f"is{i+1}TaskComplete"] = False
+    saves.save_task_statuses()
+    saves.save_tasklist()

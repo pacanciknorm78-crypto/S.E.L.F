@@ -269,6 +269,7 @@ def sysdata_default():
         json.dump(default_sysdata, f, ensure_ascii=False, indent=2)
 
 def task_status_default():
+    input("Сброс прошел")
     task_statuses = {
         "c": {
             "is1TaskComplete": False,
