@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c4b1d0cf-cf65-4302-9bb3-3ef9ad051a88" name="Changes" comment="Перенесено меню, без логики">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControllingAppReBuild/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ControllingAppReBuild/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControllingAppReBuild/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ControllingAppReBuild/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControllingAppReBuild/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/ControllingAppReBuild/task.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,16 +25,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ControllingAppReBuild" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "assignee": "pacanciknorm78-crypto",
-      "author": "pacanciknorm78-crypto"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;pacanciknorm78-crypto&quot;,
+      &quot;author&quot;: &quot;pacanciknorm78-crypto&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/pacanciknorm78-crypto/ControllingAppReBuild.git&quot;,
@@ -119,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779984881005</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Перенесено меню, без логики">
+      <option name="closed" value="true" />
+      <created>1779985365969</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779985365969</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
