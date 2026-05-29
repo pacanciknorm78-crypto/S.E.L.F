@@ -238,10 +238,10 @@ def challenges_statuses_default():
         json.dump(challenges_statuses, f, ensure_ascii=False, indent=2)
 def challenges_list_default():
     challenges_list = {
-        "easier": [],
-        "normal": [],
-        "hard": [],
-        "insane": []
+        "easier": ["1", "2"],
+        "normal": ["1", "2"],
+        "hard": ["1", "2"],
+        "insane": ["1", "2"]
     }
     with open('cache/challenges/challenges_list.json', 'w') as f:
         json.dump(challenges_list, f, ensure_ascii=False, indent=2)

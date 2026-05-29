@@ -80,6 +80,7 @@ def task_num_choice():
 
 def tasksreroll():
     clear()
+    print(head)
     print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
     print(division)
     print(f"╟{" Ежедневные Задания ":─^{Sizes.header}}╢")
@@ -93,6 +94,24 @@ def challenges():
     print(head)
     print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
     print(division)
+    print(f"╟{" Еженедельные Испытания ":─^{Sizes.header}}╢")
+    print(f"║{"":^{Sizes.header}}║")
+    print(f"║{"  ==---> Легкие испытания:    ":─<{Sizes.header}}║")
+    for i in range(3):
+        print(f"║{"Заглушка":<{Sizes.header}}║")
+    print(f"║{"  ==---> Нормальные испытания:    ":─<{Sizes.header}}║")
+    for i in range(3):
+        print(f"║{"Заглушка":<{Sizes.header}}║")
+    print(f"║{"  ==---> Сложные испытания:    ":─<{Sizes.header}}║")
+    for i in range(3):
+        print(f"║{"Заглушка":<{Sizes.header}}║")
+    print(f"║{"  ==---> БеЗуМнЫе иСпЫтАнИя:    ":─<{Sizes.header}}║")
+    for i in range(3):
+        print(f"║{"Заглушка":<{Sizes.header}}║")
+    print(f"║{"  ==---> ДЕЕМОНЫ:    ":─<{Sizes.header}}║")
+    for i in range(3):
+        print(f"║{"Заглушка":<{Sizes.header}}║")
+    print(end)
     input("<UNK>")
 
 def bonuses():

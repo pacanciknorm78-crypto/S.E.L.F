@@ -1,6 +1,6 @@
 {
-  "easier": [],
-  "normal": [],
-  "hard": [],
-  "insane": []
+  "easier": ["1", "2"],
+  "normal": ["1", "2"],
+  "hard": ["1", "2"],
+  "insane": ["1", "2"]
 }

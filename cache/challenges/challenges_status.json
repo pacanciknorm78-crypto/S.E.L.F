@@ -1,12 +1,22 @@
 {
+  "easy": {
   "is0Complete": false,
-  "is1Complete": false,
-  "is2Complete": false,
-  "is3Complete": false,
-  "is4Complete": false,
-  "is5Complete": false,
-  "is6Complete": false,
-  "is7Complete": false,
-  "is8Complete": false,
-  "is9Complete": false
+  "is1Complete": false
+  },
+  "normal ": {
+  "is0Complete": false,
+  "is1Complete": false
+  },
+  "hard": {
+  "is0Complete": false,
+  "is1Complete": false
+  },
+  "insane": {
+  "is0Complete": false,
+  "is1Complete": false
+  },
+  "demonic": {
+  "is0Complete": false,
+  "is1Complete": false
+  }
 }
