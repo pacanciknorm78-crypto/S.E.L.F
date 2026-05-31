@@ -20,39 +20,38 @@ def tasks():
         num = f'{i+1}.'
         points = 10
         status = task_status_feedback("c", i+1)
-        print(f"║ {num:<{3}} {text:<{62}} {points:>{6}}          {status:<{15}} ║")
+        print(f"║ {num:<{3}} {crop_text(text, 62):<{62}} {points:>{6}}          {status:<{15}} ║")
     print(f"║{"  ==-->  Сложность класса В:   ":─<{Sizes.header - 3}}   ║")
     for i in range(len(data.tasklist["b"])):
         text = data.tasklist["b"][i]
         num = f'{i+1}.'
         points = 20
         status = task_status_feedback("b", i+1)
-        print(f"║ {num:<{3}} {text:<{62}} {points:>{6}}          {status:<{15}} ║")
+        print(f"║ {num:<{3}} {crop_text(text, 62):<{62}} {points:>{6}}          {status:<{15}} ║")
     print(f"║{"  ==-->  Сложность класса A:   ":─<{Sizes.header - 3}}   ║")
     for i in range(len(data.tasklist["a"])):
         text = data.tasklist["a"][i]
         num = f'{i + 1}.'
         points = 50
         status = task_status_feedback("a", i+1)
-        print(f"║ {num:<{3}} {text:<{62}} {points:>{6}}          {status:<{15}} ║")
+        print(f"║ {num:<{3}} {crop_text(text, 62):<{62}} {points:>{6}}          {status:<{15}} ║")
     print(f"║{"  ==-->  Сложность класса S:   ":─<{Sizes.header - 3}}   ║")
     for i in range(len(data.tasklist["s"])):
         text = data.tasklist["s"][i]
         num = f'{i + 1}.'
         points = 100
         status = task_status_feedback("s", i+1)
-        print(f"║ {num:<{3}} {text:<{62}} {points:>{6}}          {status:<{15}} ║")
+        print(f"║ {num:<{3}} {crop_text(text, 62):<{62}} {points:>{6}}          {status:<{15}} ║")
     print(f"║{"  ==-->  Сложность класса SS:   ":─<{Sizes.header - 3}}   ║")
     for i in range(len(data.tasklist["ss"])):
         text = data.tasklist["ss"][i]
         num = f'{i + 1}.'
         points = 150
         status = task_status_feedback("ss", i+1)
-        print(f"║ {num:<{3}} {text:<{62}} {points:>{6}}          {status:<{15}} ║")
+        print(f"║ {num:<{3}} {crop_text(text, 62):<{62}} {points:>{6}}          {status:<{15}} ║")
     print(f"╟{"":─^{Sizes.header}}╢")
     print(f"║{"1 - Отметить задание выполненым. 2 - 'Реролл'. 0 - Главное меню.":^{Sizes.header}}║")
     print(end)
-
 def task_diff_choice():
     clear()
     print(head)
@@ -64,7 +63,6 @@ def task_diff_choice():
     print(f"║{" Следи за раскладкой своей клавиатуры, распознается только английский.":^{Sizes.header}}║")
     print(f"║{" Сложности: C, B, A, S, SS. Размер буквы не важен.":^{Sizes.header}}║")
     print(end)
-
 def task_num_choice():
     clear()
     print(head)
@@ -76,8 +74,6 @@ def task_num_choice():
     print(f"║{" Следи за раскладкой своей клавиатуры, распознается только английский.":^{Sizes.header}}║")
     print(f"║{" Номера для C: 1-10, B: 1-5, A: 1-4, S: 1-4, SS: 1-3. Размер буквы не важен.":^{Sizes.header}}║")
     print(end)
-
-
 def tasksreroll():
     clear()
     print(head)
@@ -97,22 +93,46 @@ def challenges():
     print(f"╟{" Еженедельные Испытания ":─^{Sizes.header}}╢")
     print(f"║{"":^{Sizes.header}}║")
     print(f"║{"  ==---> Легкие испытания:    ":─<{Sizes.header}}║")
-    for i in range(3):
-        print(f"║{"Заглушка":<{Sizes.header}}║")
+    for i in range(len(data.challenges_list["easy"])):
+        print(f"║ {i+1:<{1}}. {challenge_status_feedback("easy", i)}  {crop_text(data.challenges_list["easy"][i], 80):<{82}}  {data.challenges_data["sysData"]["amountPointForEasy"]:<{3}} {data.challenges_data["sysData"]["amountChallengePointForEasy"]:^{4}} ║")
     print(f"║{"  ==---> Нормальные испытания:    ":─<{Sizes.header}}║")
-    for i in range(3):
-        print(f"║{"Заглушка":<{Sizes.header}}║")
+    for i in range(len(data.challenges_list["normal"])):
+        print(f"║ {i+1:<{1}}. {challenge_status_feedback("normal", i)}  {crop_text(data.challenges_list["normal"][i], 80):<{82}}  {data.challenges_data["sysData"]["amountPointForNormal"]:<{3}} {data.challenges_data["sysData"]["amountChallengePointForNormal"]:^{4}} ║")
     print(f"║{"  ==---> Сложные испытания:    ":─<{Sizes.header}}║")
-    for i in range(3):
-        print(f"║{"Заглушка":<{Sizes.header}}║")
+    for i in range(len(data.challenges_list["hard"])):
+        print(f"║ {i+1:<{1}}. {challenge_status_feedback("hard", i)}  {crop_text(data.challenges_list["hard"][i], 80):<{82}}  {data.challenges_data["sysData"]["amountPointForHard"]:<{3}} {data.challenges_data["sysData"]["amountChallengePointForHard"]:^{4}} ║")
     print(f"║{"  ==---> БеЗуМнЫе иСпЫтАнИя:    ":─<{Sizes.header}}║")
-    for i in range(3):
-        print(f"║{"Заглушка":<{Sizes.header}}║")
+    for i in range(len(data.challenges_list["insane"])):
+        print(f"║ {i+1:<{1}}. {challenge_status_feedback("insane", i)}  {crop_text(data.challenges_list["insane"][i], 80):<{82}}  {data.challenges_data["sysData"]["amountPointForInsane"]:<{3}} {data.challenges_data["sysData"]["amountChallengePointForInsane"]:^{4}} ║")
     print(f"║{"  ==---> ДЕЕМОНЫ:    ":─<{Sizes.header}}║")
-    for i in range(3):
-        print(f"║{"Заглушка":<{Sizes.header}}║")
+    for i in range(len(data.challenges_list["demonic"])):
+        print(f"║ {i+1:<{1}}. {challenge_status_feedback("demonic", i)}  {crop_text(data.challenges_list["demonic"][i], 80):<{82}}  {data.challenges_data["sysData"]["amountPointForDemonic"]:<{3}} {data.challenges_data["sysData"]["amountChallengePointForDemonic"]:^{4}} ║")
+    print(f"╟{"":─^{Sizes.header}}╢")
+    print(f"║{"1 - Отметить задание выполненым. 0 - Главное меню.":^{Sizes.header}}║")
     print(end)
-    input("<UNK>")
+def chall_diff():
+    clear()
+    print(head)
+    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(division)
+    print(f"╟{" Ежедневные Задания ":─^{Sizes.header}}╢")
+    print(f"║{"":^{Sizes.header}}║")
+    print(f"║{" Сейчас напиши сложность задания, которое выполнил.":^{Sizes.header}}║")
+    print(f"║{" Следи за раскладкой своей клавиатуры, распознается только английский.":^{Sizes.header}}║")
+    print(f"║{" Сложности: Easy, Normal, Hard, Insane, Demonic. Размер буквы не важен.":^{Sizes.header}}║")
+    print(end)
+def chall_num():
+    clear()
+    print(head)
+    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(division)
+    print(f"╟{" Ежедневные Задания ":─^{Sizes.header}}╢")
+    print(f"║{"":^{Sizes.header}}║")
+    print(f"║{" Сейчас напиши только номер задания, которое выполнил.":^{Sizes.header}}║")
+    print(f"║{" Следи за раскладкой своей клавиатуры, распознается только английский.":^{Sizes.header}}║")
+    print(f"║{" Номера 1 или 2.":^{Sizes.header}}║")
+    print(end)
+
 
 def bonuses():
     clear()
@@ -166,3 +186,13 @@ def task_status_feedback(diff, num):
         return "Выполнено."
     else:
         return "Не выполнено."
+def challenge_status_feedback(diff, num):
+    chall_stat = data.challenges_statuses
+    if chall_stat[diff][f"is{num}Complete"]:
+        return "✔"
+    else:
+        return "✖"
+def crop_text(text, max_length):
+    if len(text) <= max_length:
+        return text
+    return text[:max_length - 3] + "..."

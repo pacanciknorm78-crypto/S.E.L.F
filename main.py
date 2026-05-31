@@ -1,4 +1,5 @@
 import loadings, saves, gui, task, data
+import challenge
 
 def on_start():
     loadings.load_userdata()
@@ -32,7 +33,17 @@ def tasks():
         action()
 
 def challenges():
+    choises = {
+        "1": challenge.challenges_completing,
+        "2": menu,
+        "debugreroll": challenge.challenges,
+    }
     gui.challenges()
+    userinput = input("... --> ")
+    if userinput in choises:
+        action = choises.get(userinput)
+        action()
+
 def bonuses():
     gui.bonuses()
 def menu():
