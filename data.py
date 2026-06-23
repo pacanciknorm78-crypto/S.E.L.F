@@ -1,3 +1,6 @@
+bonus_userdata = {}
+bonusdata = {}
+bonus_list = {}
 userdata = {}
 task_word_list = {}
 sysdata = {}

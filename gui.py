@@ -84,7 +84,6 @@ def tasksreroll():
     print(f"║{" Все задания сброшены, прогресс утерян":^{Sizes.header}}║")
     print(end)
 
-
 def challenges():
     clear()
     print(head)
@@ -139,8 +138,25 @@ def bonuses():
     print(head)
     print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
     print(division)
-    input("<UNK>")
-
+    print(f"╟{" Бонусы ":─^{Sizes.header}}╢")
+    print(f"║{" -- Список ативных бонусов:":<{Sizes.header}}║")
+    for i in range(2):
+        print(f"║ {"Заглушка":<{Sizes.header-1}}║")
+    print(f"║{" -- Доступные бонусы: ":<{Sizes.header}}║")
+    for i in range(5):
+        print(f"║ {"Заглушка":<{Sizes.header-1}}║")
+    print(f"║{"":<{Sizes.header}}║")
+    print(f"╟{"":─^{Sizes.header}}╢")
+    print(f"║{"1 - Магазин бонусов. 2 - Рулетка бонусов. 3 - Описание. 0 - Меню.":<{Sizes.header}}║")
+    print(end)
+def shop():
+    clear()
+    print(head)
+    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(division)
+    print(f"╟{" Магазин ":─^{Sizes.header}}╢")
+    print(f"║{"":^{Sizes.header}}║")
+    print(f"║║")
 
 
 def more():
@@ -164,6 +180,7 @@ def more():
     print(f"║{" Каждый тип сложности не только даёт разное количество очков, но и приближает тебя к бонусу. ":<{Sizes.header}}║")
     print(f"║{" Нельзя отметить выполненым более 2 в день и более 10 в неделю":<{Sizes.header}}║")
     print(end)
+    input("Press enter to continue...")
 def menu():
     clear()
     print(head)
@@ -175,7 +192,7 @@ def menu():
     print(f"║{"    Перейти к еженедельным испытаниям  --  2":<{Sizes.header}}║")
     print(f"║{"    Перейти к бонусам  --  3":<{Sizes.header}}║")
     print(f"║{"    Вернуться назад в меню  --  0":<{Sizes.header}}║")
-    print(f"║{"    Справка  --  9":<{Sizes.header}}║")
+    print(f"║{"    Справка  --  5":<{Sizes.header}}║")
     print(end)
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')

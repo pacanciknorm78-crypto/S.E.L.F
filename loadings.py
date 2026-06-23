@@ -72,3 +72,24 @@ def load_tasklist():
             data.tasklist = json.load(f)
     else:
         defaults.default_tasklist()
+def load_bonus_userdata():
+    os.makedirs('cache/bonuses', exist_ok=True)
+    if os.path.exists("cache/bonuses/user_data.json"):
+        with open('cache/bonuses/user_data.json', 'r', encoding='utf-8') as f:
+            data.bonus_userdata = json.load(f)
+    else:
+        defaults.bonus_userdata_default()
+def load_bonus_data():
+    os.makedirs('cache/bonuses', exist_ok=True)
+    if os.path.exists("cache/bonuses/bonus_data.json"):
+        with open('cache/bonuses/bonus_data.json', 'r', encoding='utf-8') as f:
+            data.bonusdata = json.load(f)
+    else:
+        defaults.bonus_data_default()
+def load_bonus_list():
+    os.makedirs('cache/bonuses', exist_ok=True)
+    if os.path.exists("cache/bonuses/bonus_list.json"):
+        with open('cache/bonuses/bonus_list.json', 'r', encoding='utf-8') as f:
+            data.bonus_list = json.load(f)
+    else:
+        defaults.bonus_list_default()

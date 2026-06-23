@@ -18,3 +18,6 @@ def save_challenges_status():
 def save_challenges_data():
     with open('cache/challenges/challenges_data.json', 'w', encoding='utf-8') as f:
         json.dump(data.challenges_data, f, ensure_ascii=False, indent=2)
+def save_bonuses_userdata():
+    with open('cache/bonuses/user_data.json.json', 'w', encoding='utf-8') as f:
+        json.dump(data.bonus_userdata, f, ensure_ascii=False, indent=2)

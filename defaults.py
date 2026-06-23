@@ -269,7 +269,6 @@ def sysdata_default():
         json.dump(default_sysdata, f, ensure_ascii=False, indent=2)
 
 def task_status_default():
-    input("Сброс прошел")
     task_statuses = {
         "c": {
             "is1TaskComplete": False,
@@ -381,3 +380,49 @@ def default_tasklist():
     }
     with open('cache/tasks/task_list.json', 'w', encoding='utf-8') as f:
         json.dump(default_tasks_history, f, ensure_ascii=False, indent=2)
+def bonus_userdata_default():
+    default_data = {
+  "haveActiveBonuses": False,
+  "activeBonuses": [],
+  "obtainedBonuses": []
+}
+    with open('cache/bonuses/user_data.json', 'w', encoding='utf-8') as f:
+        json.dump(default_data, f, ensure_ascii=False, indent=2)
+def bonus_list_default():
+    default_data = {
+  "common": [],
+  "rare": [],
+  "epic": [],
+  "legendary": []
+}
+    with open('cache/bonuses/bonus_list.json', 'w', encoding='utf-8') as f:
+        json.dump(default_data, f, ensure_ascii=False, indent=2)
+def bonus_data_default():
+    default_data = {
+    "": {
+      "name": "",
+      "rarity": "",
+      "description": "",
+      "effect": "",
+      "price": 0,
+      "shopperDescription": ""
+    },
+    "400": {
+      "name": "Из Пепла",
+      "rarity": "legendary",
+      "description": "Полностью сбрасывает вашу статистику(в будующем тоже отслеживается), включая бонусы, но позволяет выбрать 1 из бонусов, который будет действовать постоянно",
+      "effect": "revivival",
+      "price": 1000,
+      "shopperDescription": "Я не знаю, что это но комфорка из него не плохая."
+    },
+    "401": {
+      "name": "Неизвестный Артефакт",
+      "rarity": "legendary",
+      "description": "Выберете одну категорию в заданиях, и получите пожизненый бонус в ней 15%",
+      "effect": "artefact",
+      "price": 1000,
+      "shoperDescriptuon": "Я не знаю откуда эта штука, но она светится в темноте."
+    }
+}
+    with open('cache/bonuses/bonus_data.json', 'w', encoding='utf-8') as f:
+        json.dump(default_data, f, ensure_ascii=False, indent=2)
