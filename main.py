@@ -26,7 +26,7 @@ def tasks():
     choices = {
         "1": task.task_completing,
         "2": task.task_reroll,
-        "0": menu
+        "0": campfire
     }
     gui.tasks()
     userinput = input("... --> ")
@@ -36,7 +36,7 @@ def tasks():
 def challenges():
     choises = {
         "1": challenge.challenges_completing,
-        "2": menu,
+        "2": campfire,
         #"debugreroll": challenge.challenges,
     }
     gui.challenges()
@@ -49,24 +49,33 @@ def bonuses():
         "1": bonus.shop,
         "2": bonus.burmalda,
         "3": bonus.description,
-        "0": menu
+        "0": campfire
     }
     gui.bonuses()
     userinput = input("... --> ")
     if userinput in choices:
         action = choices.get(userinput)
         action()
+def stats():
+    choices = {}
+def familyar():
+    choices = {}
+def inventory():
+    choices = {}
+def world_map():
+    choices = {}
 def menu():
+    choices = {}
+def campfire():
     choices = {
-        "1": tasks,
-        "2": challenges,
-        "3": bonuses,
-        #"4": stats,
-        "5": gui.more,
-        "0": gui.menu,
-        #"9": prog_exit
+        "1": stats,
+        "2": familyar,
+        "3": tasks,
+        "4": inventory,
+        "5": world_map,
+        "menu": menu
     }
-    gui.menu()
+    gui.campfire()
     userinput = input("... --> ")
     if userinput in choices:
             action = choices.get(userinput)
@@ -75,12 +84,19 @@ def menu():
 
 def main():
     on_start()
-    if data.tasklist["c"][0] == "1":
-        task.task_generator()
-    else:
-        while True:
-            #bonus.bonus_add()
-            menu()
+    while True:
+        if data.userdata["needWelcomeScreen"]:
+            gui.welcome_screen()
+            data.userdata["needWelcomeScreen"] = False
+            saves.save_userdata()
+        else:
+            campfire()
+    # if data.tasklist["c"][0] == "1":
+    #     task.task_generator()
+    # else:
+    #     while True:
+    #         #bonus.bonus_add()
+    #         menu()
 
 
 if __name__ == '__main__':

@@ -1,11 +1,12 @@
 import os, data
 """   operators && classes   """
-#print(f"║{"":^{Sizes.header}}║")
-head     = "╔════════════════════════════════════════════════════════════════════════════════════════════════════╗"
-division = "╠════════════════════════════════════════════════════════════════════════════════════════════════════╣"
-end      = "╚════════════════════════════════════════════════════════════════════════════════════════════════════╝"
 class Sizes:
     header = 100
+#print(f"║{"":^{Sizes.header}}║")
+head     = "╔════════════════════════════════════════════════════════════════════════════════════════════════════╗"
+ac       = f"║{"SelfControlling App by Takimka.(in develop)":^{Sizes.header}}║"
+division = "╠════════════════════════════════════════════════════════════════════════════════════════════════════╣"
+end      = "╚════════════════════════════════════════════════════════════════════════════════════════════════════╝"
 
 def tasks():
     clear()
@@ -87,7 +88,7 @@ def tasksreroll():
 def challenges():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Еженедельные Испытания ":─^{Sizes.header}}╢")
     print(f"║{"":^{Sizes.header}}║")
@@ -112,7 +113,7 @@ def challenges():
 def chall_diff():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Ежедневные Задания ":─^{Sizes.header}}╢")
     print(f"║{"":^{Sizes.header}}║")
@@ -123,7 +124,7 @@ def chall_diff():
 def chall_num():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Ежедневные Задания ":─^{Sizes.header}}╢")
     print(f"║{"":^{Sizes.header}}║")
@@ -136,7 +137,7 @@ def chall_num():
 def bonuses():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Бонусы ":─^{Sizes.header}}╢")
     print(f"║{" -- Список ативных бонусов:":<{Sizes.header}}║")
@@ -152,17 +153,16 @@ def bonuses():
 def shop():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Магазин ":─^{Sizes.header}}╢")
     print(f"║{"":^{Sizes.header}}║")
     print(f"║║")
 
-
 def more():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
+    print(ac)
     print(division)
     print(f"╟{" Справка ":─^{Sizes.header}}╢")
     print(f"║{" - Общее:":<{Sizes.header}}║")
@@ -181,19 +181,47 @@ def more():
     print(f"║{" Нельзя отметить выполненым более 2 в день и более 10 в неделю":<{Sizes.header}}║")
     print(end)
     input("Press enter to continue...")
-def menu():
+
+def welcome_screen():
     clear()
     print(head)
-    print(f"║{"SelfControlling App by Takimka":^{Sizes.header}}║")
-    print(division)
-    print(f"║{"Приложение позволяет улучшить свой самоконтроль, путем поставления простеньких заданий.":^{Sizes.header}}║")
-    print(f"╟{" Навигация ":─^{Sizes.header}}╢")
-    print(f"║{"    Перейти к ежедневным заданиям  --  1":<{Sizes.header}}║")
-    print(f"║{"    Перейти к еженедельным испытаниям  --  2":<{Sizes.header}}║")
-    print(f"║{"    Перейти к бонусам  --  3":<{Sizes.header}}║")
-    print(f"║{"    Вернуться назад в меню  --  0":<{Sizes.header}}║")
-    print(f"║{"    Справка  --  5":<{Sizes.header}}║")
+    print(ac)
+    print(f"╟{"         Добро пожаловать в обучение!        ":─^{Sizes.header}}╢")
+    print(f"║{"  Привет Друг! Рад тебя видеть в этом приложении! Сейчас оно находится в стадии глубокой разработке.":<{Sizes.header}}║")
+    print(f"║{" Будь готов к масштабным изменениям, или добавлениям большого количества функций.":<{Sizes.header}}║")
+    print(f"║{" Ты уже знаешь о чем это приложение ты же читал описание? Надеюсь да.":<{Sizes.header}}║")
+    print(f"║{" В общем я помогу тебе с самым стартом, пока это в текстовом формате, работу над интерфесом уже веду.":<{Sizes.header}}║")
+    print(f"║{" Приложение пока не может и возможно даже в будущем не сможет отслеживать правдивость выполнения заданий, ноо":<{Sizes.header}}║")
+    print(f"║{" я надеюсь на твою честность. ХЗ Почитай далее сам, постарался кратко.":<{Sizes.header}}║")
+    print(f"║{"   ---  Общее:":<{Sizes.header}}║")
+    print(f"║{" В приложении много чего, больше об этом узнаешь от компаньона, но самым важным являются режим:'Лагерь' и режим:'Приключение'":<{Sizes.header}}║")
+    print(f"║{" Первый из названых более казуальный и простой, второй нацелен на историю и повествование.":<{Sizes.header}}║")
+    print(f"║{" Выбирай то, что тебе по душе. Можешь почитать дальше о них подробнее если не интересно, просто пропусти.":<{Sizes.header}}║")
+    print(f"║{"   ---  Интерфейс:":<{Sizes.header}}║")
+    print(f"║{" Тут кратко по интерфейсу и расположению всего, что может бытсь отражено.":<{Sizes.header}}║")
+    print(f"║{" Сверху, где идет заполнение единичной чертой - локация(меню) в котором ты находишься в данный момент.":<{Sizes.header}}║")
+    print(f"║{" Сразу под этим в кавычках находится реплика твоего компаньона.":<{Sizes.header}}║")
+    print(f"║{" После расположено основное информационное пространство.":<{Sizes.header}}║")
+    print(f"║{" Ниже всего за такой же единичной полосой располагаются варианты действий":<{Sizes.header}}║")
+    print(f"╟{"":─^{Sizes.header}}╢")
+    print(f"╟{"Нажми Enter для перехода далее.":^{Sizes.header}}╢")
     print(end)
+    input()
+    clear()
+    print(head)
+    print(ac)
+    print(f"╟{"   Обучение   ":─^{Sizes.header}}╢")
+    print(f"║{"   ---  Лагерь:":<{Sizes.header}}║")
+    print(f"║{" Это твоя постоянная обитель. Стартовый режим, который позволяет без напряжения узнавать механики.":<{Sizes.header}}║")
+    print(f"║{" Тут ты сможешь просто поболтать со своим фамильяром, и следить за своим лагерем.":<{Sizes.header}}║")
+    print(f"║{" Из лагеря ты можешь свободно перемещаться по локациям карты.":<{Sizes.header}}║")
+    print(f"║{"   ---  Приключение:":<{Sizes.header}}║")
+    print(f"║{" Режим для более смелых и целеустремленных людей, тут и задания тяжелее и их больше.":<{Sizes.header}}║")
+    print(f"║{" Если ты один из таких, то докажи это. Приключения повествуют историю мира и персонажей.":<{Sizes.header}}║")
+    print(f"╟{"":─^{Sizes.header}}╢")
+    print(f"╟{"Нажми Enter для завершения обучения.":^{Sizes.header}}╢")
+    print(end)
+    input()
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -213,3 +241,18 @@ def crop_text(text, max_length):
     if len(text) <= max_length:
         return text
     return text[:max_length - 3] + "..."
+def campfire():
+    clear()
+    print(head)
+    print(ac)
+    print(division)
+    print(f"╟{" Лагерь ":─^{Sizes.header}}╢")
+    print(f"║{' """ Реплика фамильяра """    ':>{Sizes.header}}║")
+    print(f"║{"    Костер горящий в центре лагеря(log:)":<{Sizes.header}}║")
+    print(f"║{"    Твой ФАМИЛЬЯР занятый(log:)":<{Sizes.header}}║") #возможно переписать под разные занятия инного
+    print(f"║{"    Стоит доска объявлений и на ней видны висящие листки":<{Sizes.header}}║")
+    print(f"║{"    Рюкзаки с котелками и другими вещами":<{Sizes.header}}║")
+    print(f"║{"    Потрепанная карта, лежащая у входа в палатку":<{Sizes.header}}║")
+    print(f"╟{"":─^{Sizes.header}}╢")
+    print(f"║{" Костер - 1 | ФАМИЛЬЯР - 2 | Доска объявлений - 3 | Снаряжение - 4 | Карта - 5 ":^{Sizes.header}}║")
+    print(end)

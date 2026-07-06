@@ -248,6 +248,7 @@ def challenges_list_default():
 
 def userdata_default():
     default_userdata = {
+        "needWelcomeScreen": True,
         "pastDay": None,
         "today": None,
         "amountOfLoseStreaks": 0,
