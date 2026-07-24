@@ -1,10 +1,8 @@
 {
     "needWelcomeScreen": false,
-    "pastDay": null,
-    "today": null,
+    "firstDayUserAppeared": null,
     "amountOfLoseStreaks": 0,
     "maxStreakLength": 0,
     "currentStreakLength": 0,
-    "amountStreakRecovery": 1,
     "todayPointsAmount": 0
 }

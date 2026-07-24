@@ -1,4 +1,4 @@
-import gui, data, random, defaults, saves
+import gui, data, random, saves
 
 def task_completing():
     gui.task_diff_choice()

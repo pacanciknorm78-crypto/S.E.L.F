@@ -28,44 +28,75 @@ def tasks():
         "2": task.task_reroll,
         "0": campfire
     }
-    gui.tasks()
+    gui.bill_board()
     userinput = input("... --> ")
     if userinput in choices:
         action = choices.get(userinput)
         action()
-def challenges():
-    choises = {
-        "1": challenge.challenges_completing,
-        "2": campfire,
-        #"debugreroll": challenge.challenges,
-    }
-    gui.challenges()
-    userinput = input("... --> ")
-    if userinput in choises:
-        action = choises.get(userinput)
-        action()
-def bonuses():
-    choices = {
-        "1": bonus.shop,
-        "2": bonus.burmalda,
-        "3": bonus.description,
-        "0": campfire
-    }
-    gui.bonuses()
-    userinput = input("... --> ")
-    if userinput in choices:
-        action = choices.get(userinput)
-        action()
+
 def stats():
-    choices = {}
+    choices = {"1": campfire,
+               "2": characteristics}
+    gui.stats()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        stats()
+def characteristics():
+    choices = {"1": campfire,
+               "2": stats}
+    gui.characteristics()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        characteristics()
+
 def familyar():
     choices = {}
+    gui.familyar()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        familyar()
 def inventory():
     choices = {}
+    gui.equipment()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        inventory()
 def world_map():
     choices = {}
+    gui.world_map()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        world_map()
 def menu():
     choices = {}
+    gui.campfire()
+    userinput = input("... --> ")
+    if userinput in choices:
+        action = choices.get(userinput)
+        action()
+    else:
+        gui.invalid_input()
+        campfire()
 def campfire():
     choices = {
         "1": stats,
@@ -80,7 +111,9 @@ def campfire():
     if userinput in choices:
             action = choices.get(userinput)
             action()
-
+    else:
+        gui.invalid_input()
+        campfire()
 
 def main():
     on_start()
@@ -101,3 +134,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+"""
+TODO
+заглушки + основные меню
+внешние модули
+кор + логика
+"""

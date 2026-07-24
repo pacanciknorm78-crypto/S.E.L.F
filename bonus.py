@@ -19,8 +19,8 @@ def description():
     print("Description")
     input("Press enter to continue...")
 
-
-#Translete to debug.py
+#костыль
+#Перенести в debug.py
 def bonus_add():
     print("Bonus Add")
     id = input("ID: ")
