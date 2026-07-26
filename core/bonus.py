@@ -1,5 +1,6 @@
 import json
-import gui, data
+from core import data
+from ControllingAppReBuild.gui import gui
 
 def shop():
     choises= {

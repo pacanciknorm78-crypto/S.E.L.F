@@ -1,8 +1,0 @@
-{
-    "needWelcomeScreen": false,
-    "firstDayUserAppeared": null,
-    "amountOfLoseStreaks": 0,
-    "maxStreakLength": 0,
-    "currentStreakLength": 0,
-    "todayPointsAmount": 0
-}
