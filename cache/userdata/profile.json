@@ -1,1 +1,42 @@
-{}
+{
+  "name": "None",
+  "streak": 0,
+  "max_streak": 0,
+  "streak_losses": 0,
+  "coins": 0,
+  "camp_upgrades": {
+    "tent": false,
+    "storage": false,
+    "bench": false,
+    "lamps": false
+  },
+  "level": 0,
+  "experience": 0,
+  "active_perk": false,
+  "perks": [],
+  "skill_tree": {
+    "coding": 0,
+    "tree_carving": 0
+  },
+  "achievements": [],
+  "active_bonus": false,
+  "list_active_bonus": [],
+  "statistics": {
+    "spoke_to_familiar": 0,
+    "events_completed": 0,
+    "total_task_completed": 0,
+    "favourite_category": "None",
+    "task_by_category": {
+      "coding": 0,
+      "tree_carving": 0
+    }
+  },
+  "inventory": [
+    {"id": "item1", "count": 0}
+  ],
+  "equipped": ["old_oil_lamp", "small_waist_bag"],
+  "locations_unlocked": ["meadow", "lake"],
+  "last_login": "dd-mm-yyyy",
+  "first_login": "dd-mm-yyyy",
+  "total_playtime_minutes": 0
+}

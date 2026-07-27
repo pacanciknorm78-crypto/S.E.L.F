@@ -1,1 +1,9 @@
-{}
+{
+  "quest_id": {
+    "quest_giver": "None",
+    "hook": "hookID",
+    "ending": "endingID",
+    "need": "None",
+    "completed": false
+  }
+}

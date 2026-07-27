@@ -1,1 +1,10 @@
-{}
+{
+  "theme": "dark",
+  "language": "rus",
+  "music_volume": 100,
+  "effects_volume": 100,
+  "voice_volume": 100,
+  "familiar": "nox",
+  "first_launch": true,
+  "developer_mode": false
+}
